@@ -25,7 +25,7 @@ namespace Downloader
 			Directory.CreateDirectory(dir);
 			foreach(var card in Cards.All.Values)
 			{
-				if(card.Set == CardSet.CHEAT)
+				if(card.Set == CardSet.CHEAT || card.Set == CardSet.SLUSH)
 					continue;
 				if(!card.Collectible && card.Type != CardType.MINION
 					&& card.Type != CardType.SPELL && card.Type != CardType.WEAPON)
