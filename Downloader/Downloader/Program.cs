@@ -24,7 +24,7 @@ namespace Downloader
 				if(card.Set == CardSet.CHEAT || card.Set == CardSet.SLUSH)
 					return;
 				if(!card.Collectible && card.Type != CardType.MINION
-					&& card.Type != CardType.SPELL && card.Type != CardType.WEAPON)
+					&& card.Type != CardType.SPELL && card.Type != CardType.WEAPON && card.Type != CardType.BATTLEGROUND_SPELL)
 					return;
 				var img = new FileInfo($"{dir}\\{card.Id}.png");
 				if(!img.Exists)
